@@ -42,6 +42,7 @@ button.addEventListener("click", () => {
   const inputText = inputAdd.value;
   if (inputText.trim() === "") {
     inputAdd.style.borderColor = "red";
+      alert("Напишіть у строку хоть щось!")
   } else {
     inputAdd.style.borderColor = "black";
     inputAdd.value = "";
@@ -87,7 +88,7 @@ function saveChecked(id, todo) {
       if (response.ok) {
         getData();
         return response.json();
-      }
+      } 
     })
     .then((task) => {})
     .catch((error) => {
